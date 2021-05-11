@@ -1,4 +1,5 @@
 import Sequelize from 'sequelize'
+const houses = require('./Houses')
 
 export const Amenities = function(sequelize) {
     return sequelize.define('amenities', {
