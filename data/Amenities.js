@@ -15,7 +15,7 @@ export const Amenities = function(sequelize) {
         houseId: {
             type: Sequelize.INTEGER,
             references: {
-                model: houses,
+                model: 'houses',
                 key: 'id'
             }
         }

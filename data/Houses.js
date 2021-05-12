@@ -45,13 +45,16 @@ export const Houses = function (sequelize) {
             type: Sequelize.BOOLEAN
         },
         description: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING(8000)
         },
         garage: {
             type: Sequelize.INTEGER
         },
         bedrooms: {
             type: Sequelize.INTEGER
+        },
+        type: {
+            type: Sequelize.STRING
         }
 
     }, {

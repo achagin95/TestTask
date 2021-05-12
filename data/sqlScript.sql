@@ -16,7 +16,7 @@ price int not null,
 phone varchar(45) not null,
 square int not null,
 hasBasement boolean,
-description varchar(45) not null,
+description varchar(8000) not null,
 garage int not null,
 bedrooms int not null,
 type varchar(45) not null,
@@ -33,7 +33,7 @@ id int not null auto_increment,
 amenitiesName varchar(45) not null,
 houseId int not null,
 primary key (id),
-unique key amenitiesName (amenitiesName),
+/*unique key amenitiesName (amenitiesName),*/
 foreign key (houseId) references houses (id) on delete cascade
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
@@ -42,7 +42,7 @@ id int not null auto_increment,
 imageUrl varchar(255) not null,
 houseId int not null,
 primary key (id),
-unique key imageUrl (imageUrl),
+/*unique key imageUrl (imageUrl),*/
 foreign key (houseId) references houses (id) on delete cascade
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
