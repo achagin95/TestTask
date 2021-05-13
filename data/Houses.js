@@ -1,4 +1,4 @@
-import Sequelize from 'sequelize'
+import {Sequelize} from 'sequelize'
 
 export const Houses = function (sequelize) {
     return sequelize.define('houses', {

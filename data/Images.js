@@ -1,4 +1,4 @@
-import Sequelize from 'sequelize'
+import {Sequelize} from 'sequelize'
 const houses = require('./Houses')
 
 export const Images = function(sequelize) {

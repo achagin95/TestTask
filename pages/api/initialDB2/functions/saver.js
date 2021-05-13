@@ -1,1 +1,0 @@
-import { amenities as Amenities, images as Images, houses } from '../../data'
