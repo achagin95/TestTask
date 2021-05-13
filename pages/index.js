@@ -9,6 +9,8 @@ export default function Home() {
       const data = await fetch('http://localhost:3000/api/getAll')
       const json = await data.json()
       console.log(json)
+
+      
     } catch (error) {
       
     }
