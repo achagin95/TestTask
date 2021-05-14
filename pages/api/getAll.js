@@ -27,8 +27,6 @@ export default async (req, res) => {
                 item.images = im
             }
         }
-
-
         res.status(200).json( houses )
     } catch (error) {
         console.error('Unable to connect to the database:', error);

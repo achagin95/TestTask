@@ -1,0 +1,24 @@
+body{
+    margin: 0 auto;
+}
+.wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+    'navbar'
+    'content'
+    'footer';
+    grid-template-rows: 60px auto 40px;
+    grid-row-gap: 10px;
+    //для начала, позже поменяю
+}
+footer{
+    padding-top: 50px;
+    span{
+        background-color: blue;
+        color: burlywood;
+        padding: 3px 5px;
+        border-radius: 11px;
+    }
+}

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Head from 'next/head'
+import { Layout } from "../../components/Layout";
 
 
 export default function Listings() {
@@ -14,7 +15,7 @@ export default function Listings() {
   }, []);
 
   return (
-    <div>
+    <Layout>
       <Head>
         <title>Houses for Sale</title>
       </Head>
@@ -24,7 +25,7 @@ export default function Listings() {
               {item.product}
           </div> )}
       </div>
-    </div>
+    </Layout>
   )
 }
 
