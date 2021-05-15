@@ -39,7 +39,7 @@ export default async (req, res) => {
             amenitiesName: `${itemAmen}`,
             houseId: idForDB,
           })
-          const result = await newAmenitie.save()
+          await newAmenitie.save()
         }
       }
 
