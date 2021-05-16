@@ -1,0 +1,57 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+.im{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    img{
+        width: 400px;
+        height: 400px;
+    }
+    span{
+        font-weight: 600;
+        font-size: 100px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    button{
+        font-weight: 600;
+        font-size: 100px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+.wl {
+    //width: 600px;
+    //height: 440px;
+}
+.detailRight {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: chartreuse;
+}
+.detailRight2{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    background-color: rgb(208, 255, 0);
+}
+.detailUnder{
+    grid-row: 3/4;
+    grid-column: 1/4;
+    background-color: cadetblue;
+}

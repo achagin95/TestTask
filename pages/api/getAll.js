@@ -12,7 +12,8 @@ export default async (req, res) => {
             const amens = await Amenities.findAll({
                 where: {
                     houseId: item.id
-                }
+                },
+                raw: true
             })
             if (amens) {
                 item.amenities = amens
@@ -21,7 +22,8 @@ export default async (req, res) => {
             const im = await Images.findAll({
                 where: {
                     houseId: item.id
-                }
+                },
+                raw: true
             })
             if (im) {
                 item.images = im
