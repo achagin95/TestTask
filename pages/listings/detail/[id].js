@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 import { getHouseById } from '../../../components/dao'
+import { Description } from '../../../components/Detail/Description'
+import Image from '../../../components/Detail/Image'
 import { Layout } from '../../../components/Layout'
 import style from '../../../styles/detail.module.scss'
 
@@ -11,18 +12,6 @@ export default function Detail({ houseProps }) {
         addressZip, builder, price, phone, square,
         hasBasement, description, garage, bedrooms, type,
         amenities, images } = home
-    console.log(home)
-    console.log('render')
-    const [imageId, setImageId] = useState(0)
-    //добавить состояния для картинок, позже перенсти их в редакс
-
-    const onClickHandlerDown = (id) => {
-        id - 1 < 0 ? setImageId(images.length - 1) : setImageId(id - 1)
-    }
-
-    const onClickHandlerUp = (id) => {
-        id + 1 > images.length - 1 ? setImageId(0) : setImageId(id + 1)
-    }
 
     return (
         <Layout>
@@ -36,14 +25,7 @@ export default function Detail({ houseProps }) {
                     </div>
                 </header>
                 <section className={`${style.im} ${style.wl}`}>
-
-                    <button onClick={() => onClickHandlerDown(imageId)} disabled={images.length<=1}>{"<"}</button>
-                    <img
-                        id={images[imageId].id}
-                        src={`${images[imageId].imageUrl}`}
-                        onClick={(event) => console.log(event.target)}
-                    />
-                    <button onClick={() => onClickHandlerUp(imageId)} disabled={images.length<=1}>{">"}</button>
+                    <Image images={images}/>
                 </section>
                 <section className={style.detailRight}>
                     <ul>
@@ -72,10 +54,7 @@ export default function Detail({ houseProps }) {
                     <div><strong>Phone: </strong>{phone}</div>
                 </section>
                 <section className={style.detailUnderRight}>
-                     <button>description</button>
-                     //добавить скрытое описание, которое появляется при
-                     //нажатии на кнопку
-                     <p>Секцию с картинкой убрать в отдельный компонент</p>
+                     <Description description={description}/>
                 </section>
             </div>
         </Layout>
