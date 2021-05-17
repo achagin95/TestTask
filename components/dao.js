@@ -20,16 +20,9 @@ export async function getHouseById(id) {
             },
             raw: true
         })
-        if (amen){ 
-            house.amenities = amen
-        } else {
-            house.amenities = []
-        }
-        if (images) {
-            house.images = images
-        } else {
-            house.images = []
-        }
+        amen ? house.amenities = amen : house.amenities = []
+        images ? house.images = images : house.images = []
+        
         return house
     } catch (error) {
         

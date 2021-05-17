@@ -16,7 +16,7 @@
 .im{
     grid-row: 2/3;
     grid-column: 1/2;
-    background-color: brown;
+    //background-color: brown;
     display: flex;
     align-items: center;
     img{
@@ -34,24 +34,62 @@
         font-size: 100px;
         margin-left: 5px;
         margin-right: 5px;
+        background-color: blue;
+        color: rgb(43, 226, 226);
+        border-radius: 15px;
+        box-shadow: 2px 5px 10px 1px rgb(14, 0, 77);
+        &:disabled {
+            background-color: rgb(70, 131, 146);
+            color:cadetblue;
+        }
     }
 }
 .wl {
     //width: 600px;
     //height: 440px;
+    color: rgb(14, 0, 77);
 }
 .detailRight {
     grid-row: 2/3;
     grid-column: 2/3;
-    background-color: chartreuse;
+    //background-color: chartreuse;
+    ul {
+        padding-left: 10px;
+    }
+    li {
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
 }
 .detailRight2{
     grid-row: 2/3;
     grid-column: 3/4;
-    background-color: rgb(208, 255, 0);
+    //background-color: rgb(208, 255, 0);
+    ul {
+        padding-left: 10px;
+    }
+    li {
+        strong {
+            color: rgb(71, 0, 99);
+        }
+        list-style-type: none;
+        margin-bottom: 35px;  
+    }
 }
+
 .detailUnder{
     grid-row: 3/4;
-    grid-column: 1/4;
+    grid-column: 1/2;
+    //background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .red {
+        color: rgba(194, 1, 1, 0.925);
+    }
+}
+.detailUnderRight {
+    grid-row: 3/4;
+    grid-column: 2/4;
     background-color: cadetblue;
 }
