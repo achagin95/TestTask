@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import style from '../../styles/detail.module.scss'
 
 export function Description({ description }) {
 
@@ -25,7 +26,7 @@ export function Description({ description }) {
         <div ref={descrRef}>
             <button onClick={toggleVisible}>description</button>
             {visible &&
-                <div>
+                <div className={style.n}>
                     {description}
                 </div>}
         </div>

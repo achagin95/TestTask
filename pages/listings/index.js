@@ -1,19 +1,22 @@
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import Head from 'next/head'
 import { Layout } from "../../components/Layout";
 import {SortedButton} from '../../components/listing/SortedButton'
 
+import {setPage} from '../../redux/actions/pages'
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Listings() {
-  const [listings, setListings] = useState([]);
+  const dispatch = useDispatch()
+  const state = useSelector(state => state)
+  const {pageNumber} = useSelector(({setPage}) => setPage)
+  console.log(state.setPage.pageNumber)
+  console.log(pageNumber)
+  //const [numberForJSX, setNumberForJSX] = useState(pageNumber)
 
-  useEffect(() => {
-    fetch('api/listings')
-    .then(res => res.json())
-    .then(result => {
-      setListings(result);
-    });
-  }, []);
+  const pageUpHandler = useCallback((number) => {
+    dispatch(setPage(number))
+  },[])
 
   return (
     <Layout>
@@ -27,13 +30,16 @@ export default function Listings() {
          <div>
 
          </div>
+         <div>
+           <button onClick={()=>pageUpHandler(pageNumber+1)}>{'>'}</button>
+         </div>
       </div>
     </Layout>
   )
 }
 
 export async function getStaticProps(context) {
-  
+  //поменять на сервер сайд пропс!!!!
   console.log(context)
   console.log(context.params)
   const qwe = 'qwe'
