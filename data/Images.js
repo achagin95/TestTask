@@ -1,5 +1,5 @@
 import {Sequelize} from 'sequelize'
-const houses = require('./Houses')
+
 
 export const Images = function(sequelize) {
     return sequelize.define('images', {

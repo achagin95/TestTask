@@ -8,11 +8,10 @@ import style from '../../../styles/detail.module.scss'
 export default function Detail({ houseProps }) {
     const router = useRouter()
     const home = JSON.parse(houseProps)
-    const { id, product, addressStreet, addressCity, addressState,
+    const { product, addressStreet, addressCity, addressState,
         addressZip, builder, price, phone, square,
         hasBasement, description, garage, bedrooms, type,
         amenities, images } = home
-    console.log(router)
 
     return (
         <Layout>
@@ -66,7 +65,6 @@ export async function getServerSideProps(context) {
 
     const data = await getHouseById(context.params.id)
     const houseProps = JSON.stringify(data)
-
     return {
         props: { houseProps },
     }

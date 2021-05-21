@@ -6,6 +6,7 @@ import { setSort } from '../../redux/actions/sort'
 
 const sortBy = ['id', 'price_up', 'price_down', 'square']
 
+
 export function SortedButton() {
 
     const { sort } = useSelector(({ setSort }) => setSort)

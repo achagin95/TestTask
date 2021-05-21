@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import style from '../../styles/detail.module.scss'
 
 export default function Image({ images }) {
     const [imageId, setImageId] = useState(0)

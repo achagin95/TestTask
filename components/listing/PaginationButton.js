@@ -4,11 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
 export default function PaginationButton({count}) {
-    const router = useRouter()
     const dispatch = useDispatch()
     const { pageNumber } = useSelector(({ setPage }) => setPage)
-    //console.log('router PAgination',router)
-    
 
     const pageToggleHandler = useCallback((number) => {
         dispatch(setPage(number))

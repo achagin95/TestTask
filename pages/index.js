@@ -5,14 +5,6 @@ import { Layout } from '../components/Layout'
 
 
 export default function Home() {
-  // useEffect(async()=> {
-  //   try {
-  //     const data = await fetch('http://localhost:3000/api/getAll')
-  //     const json = await data.json()
-  //     console.log(json)
-  //   } catch (error) {
-  //   }
-  // })
 
   return (
     <Layout>
