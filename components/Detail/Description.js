@@ -12,7 +12,6 @@ export function Description({ description }) {
 
     const handleOutsideClick = (event) => {
         const path = event.path || (event.composedPath && event.composedPath())
-        console.log(path.includes(descrRef.current))
         if (!path.includes(descrRef.current)) {
             setVisible(false)
         }

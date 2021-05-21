@@ -29,15 +29,19 @@ export async function getHouseById(id) {
     }
 }
 
-export function getImagesByHouseId(houseId) {
-
+export async function getHousesCount() {
+    return await db.houses.count()
 }
 
 export function getAmenitiesByHouseId(houseId) {
 
 }
 
-export async function getHousesPagination(numberPage) {
+export async function getHousesPaginationWithFilters(numberPage, 
+    filterPrice=0,
+    filterAlfabet=0,
+    filterSquare=0,
+    filterBedrooms=0) {
     try {
         const house = await db.houses.findOne({
             where: {

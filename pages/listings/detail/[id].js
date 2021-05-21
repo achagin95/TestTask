@@ -12,6 +12,7 @@ export default function Detail({ houseProps }) {
         addressZip, builder, price, phone, square,
         hasBasement, description, garage, bedrooms, type,
         amenities, images } = home
+    console.log(router)
 
     return (
         <Layout>

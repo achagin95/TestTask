@@ -13,7 +13,7 @@ const sequelize = new Sequelize('testTaskSmartForce', 'testUser', 'test', {
 // }).catch(err=>console.log(err))
 
 // sequelize.sync().then(result => {
-//     console.log(result);
+//     console.log('DB synced');
 // }).catch(err => console.log(err));
 
 export const houses = Houses(sequelize)
